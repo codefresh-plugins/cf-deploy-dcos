@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+DEFINITION_FILE=${1:-deployment.json}
+
+if [[ -n "$DCOS_URL" ]]; then
+  dcos setup cluster $DCOS_URL"
+  dcos marathon app add $DEFINITION_FILE
