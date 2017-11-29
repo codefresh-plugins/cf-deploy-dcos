@@ -6,7 +6,9 @@ ENV \
     DCOS_CLI_FILENAME="dcos"
 
 ADD ${DCOS_CLI_URL} /usr/local/bin/${DCOS_CLI_FILENAME}
+ADD cf-deploy-dcos /cf-deploy-dcos
 
-RUN chmod 755 /usr/local/bin/${DCOS_CLI_FILENAME}
+RUN chmod 755 /usr/local/bin/${DCOS_CLI_FILENAME} && \
+    chmod 755 /cf-deploy-dcos
 
 ENTRYPOINT ["/bin/sh", "-c"]
