@@ -20,11 +20,11 @@ else
   touch $DCOS_CLUSTER_ID_DIR/attached
   cat <<EOF > $DCOS_CLUSTER_ID_DIR/dcos.toml
 [core]
-dcos_url = $DCOS_URL
-ssl_verify = $SSL_VERIFY
-dcos_acs_token = $DCOS_DCOS_ACS_TOKEN
+dcos_url = "$DCOS_URL"
+ssl_verify = "$SSL_VERIFY"
+dcos_acs_token = "$DCOS_DCOS_ACS_TOKEN"
 [cluster]
-name = $DCOS_CLUSTER_NAME
+name = "$DCOS_CLUSTER_NAME"
 EOF
 fi
 
