@@ -7,8 +7,10 @@ ENV \
 
 ADD ${DCOS_CLI_URL} /usr/local/bin/${DCOS_CLI_FILENAME}
 ADD cf-deploy-dcos /cf-deploy-dcos
+ADD templater.sh /templater.sh
 
 RUN chmod 755 /usr/local/bin/${DCOS_CLI_FILENAME} && \
-    chmod 755 /cf-deploy-dcos
+    chmod 755 /cf-deploy-dcos && \
+    chmod 755 /templater.sh
 
 ENTRYPOINT ["/bin/sh", "-c"]
