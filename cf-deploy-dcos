@@ -28,7 +28,7 @@ name = $DCOS_CLUSTER_NAME
 EOF
 fi
 
-chmod 600 $DCOS_CLUSTER_ID_DIR/dcos.toml
+chmod o+rw $DCOS_CLUSTER_ID_DIR/dcos.toml
 
 if [[ -n "$DCOS_URL" ]]; then
 # dcos cluster setup --insecure $DCOS_URL
