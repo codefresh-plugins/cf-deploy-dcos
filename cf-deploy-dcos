@@ -26,6 +26,9 @@ dcos_acs_token = $DCOS_DCOS_ACS_TOKEN
 [cluster]
 name = $DCOS_CLUSTER_NAME
 EOF
+
+  chmod 600 $DCOS_CLUSTER_ID_DIR/dcos.toml
+
 fi
 
 if [[ -n "$DCOS_URL" ]]; then
