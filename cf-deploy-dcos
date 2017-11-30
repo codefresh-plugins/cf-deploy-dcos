@@ -28,9 +28,10 @@ name = "$DCOS_CLUSTER_NAME"
 EOF
 fi
 
-chmod 0600 $DCOS_CLUSTER_ID_DIR/dcos.toml
+chmod 0600 $DCOS_CLUSTER_ID_DIR/dcos.toml && \
+chmod 0600 $DCOS_CLUSTER_ID_DIR/attached
 
-if [[ -n "$DCOS_URL" ]]; then
+if [[ -n "$DEFINITION_FILE" ]]; then
 # dcos cluster setup --insecure $DCOS_URL
   dcos marathon app add $DEFINITION_FILE
 fi
