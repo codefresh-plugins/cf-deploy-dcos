@@ -6,7 +6,7 @@ It takes application deployment template (deployment.tmpl) and generates applica
 # Usage
 In order to use the `codefresh/cf-deploy-dcos` image we need to do the following:
 
-1. Define environment variables in Codefresh pipeline
+1. Define environment variables in Codefresh pipeline.
 
 - `DCOS_URL` **required** - DC/OS cluster URL
 - `DCOS_CLUSTER_NAME` **required** - DC/OS cluster name
@@ -17,7 +17,7 @@ In order to use the `codefresh/cf-deploy-dcos` image we need to do the following
 - `IMAGE_NAME` - application image name
 - `IMAGE_TAG` - application image tag
 
-2. Create deployment.tmpl and codefresh.yml files in an application repository at root level
+2. Create deployment.tmpl and codefresh.yml files in an application repository at the root level.
 
 ```
 codefresh.yml
@@ -49,7 +49,7 @@ steps:
       - IMAGE_NAME=${{IMAGE_NAME}}
       - IMAGE_TAG=${{IMAGE_TAG}}
 ```
-We define freestyle step (DeployToDcos in the example above) and environment variables the same as in Codefresh pipeline
+We define freestyle step (DeployToDcos in the example above) and environment variables the same as in the Codefresh pipeline.
 
 ```
 deployment.tmpl
