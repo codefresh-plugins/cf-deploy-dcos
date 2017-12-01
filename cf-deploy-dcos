@@ -33,9 +33,9 @@ chmod 0600 $DCOS_CLUSTER_ID_DIR/attached
 
 fi
 
-[ ! -f "$DEFINITION_TMPL" ] && echo "Couldn't find $DEFINITION_TMPL file" && exit 1;
+[ ! -f "$DEPLOYMENT_TMPL" ] && echo "Couldn't find $DEPLOYMENT_TMPL file" && exit 1;
 
-/templater.sh "$DEFINITION_TMPL" > "$DEPLOYMENT_FILE" || fatal "Failed to apply deployment template on $"
+/templater.sh "$DEPLOYMENT_TMPL" > "$DEPLOYMENT_FILE" || fatal "Failed to apply deployment template"
 
 if [[ -n "$DEPLOYMENT_FILE" ]]; then
 # dcos cluster setup --insecure $DCOS_URL
