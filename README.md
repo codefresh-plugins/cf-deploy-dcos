@@ -53,7 +53,7 @@ We define freestyle step (DeployToDcos in the example above) and environment var
 
 ```
 deployment.tmpl
----
+
 {
   "id": "{{APP_ID}}",
   "instances": 1,
