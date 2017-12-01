@@ -7,14 +7,15 @@ It takes application deployment template (deployment.tmpl) and generates applica
 In order to use the `codefresh/cf-deploy-dcos` image we need to do the following:
 
 1. Define environment variables in Codefresh pipeline
-`DCOS_URL` **required** - DC/OS cluster URL
-`DCOS_CLUSTER_NAME` **required** - DC/OS cluster name
-`DCOS_CLUSTER_ID` **required** - DC/OS cluster ID
-`DCOS_DCOS_ACS_TOKEN` **required** - DC/OS cluster existing user's token
-`DCOS_SSL_VERIFY` default is true, if we want to bypass SSL certificate verification - set it to `false`
-`APP_ID` - application name
-`IMAGE_NAME` - application image name
-`IMAGE_TAG` - application image tag
+
+- `DCOS_URL` **required** - DC/OS cluster URL
+- `DCOS_CLUSTER_NAME` **required** - DC/OS cluster name
+- `DCOS_CLUSTER_ID` **required** - DC/OS cluster ID
+- `DCOS_DCOS_ACS_TOKEN` **required** - DC/OS cluster existing user's token (make it encrypted)
+- `DCOS_SSL_VERIFY` default is true, if we want to bypass SSL certificate verification - set it to `false`
+- `APP_ID` - application name
+- `IMAGE_NAME` - application image name
+- `IMAGE_TAG` - application image tag
 
 2. Create deployment.tmpl and codefresh.yml files in an application repository at root level
 
