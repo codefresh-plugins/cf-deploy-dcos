@@ -1,10 +1,10 @@
 # cf-deploy-dcos
-The repository contains code for `codefresh/cf-deploy-dcos` image building. This image makes an application deployment on DC/OS cluster using application definition json file.
+The repository contains code for `codefreshplugins/cf-deploy-dcos` image building. This image makes an application deployment on DC/OS cluster using application definition json file.
 It takes application deployment template (deployment.tmpl) and generates application deployment json file substituting variables in the template with the the environment variables values then applies the application deployment json file to DC/OS cluster using DC/OS CLI command.
 
 
 # Usage
-In order to use the `codefresh/cf-deploy-dcos` image we need to do the following:
+In order to use the `codefreshplugins/cf-deploy-dcos` image we need to do the following:
 
 1. Define environment variables in Codefresh pipeline.
 
@@ -35,7 +35,7 @@ steps:
     ...
 
   DeployToDcos:
-    image: codefresh/cf-deploy-dcos:latest
+    image: codefreshplugins/cf-deploy-dcos:latest
     working_directory: ${{main_clone}}
     commands:
       - /cf-deploy-dcos deployment.tmpl
