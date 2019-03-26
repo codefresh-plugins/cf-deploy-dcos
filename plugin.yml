@@ -10,7 +10,7 @@ sources:
 maintainers: # (optional)
   - name: Eugene Semirski
     email: eugene@codefresh.io
-icon: https://avatars0.githubusercontent.com/u/29493517?v=4&s=400
+icon: https://github.com/codefresh-plugins/cf-deploy-dcos/blob/master/icon.jpg
 envs:
   - name: DCOS_URL
     type: required
