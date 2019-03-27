@@ -1,6 +1,8 @@
 image: codefreshplugins/cf-deploy-dcos
 version: 0.1.0
 description: Deploy an application on dcos cluster
+categories:
+  - deployment
 keywords:
   - dcos
   - deploy
